@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main/style.css">
+    <link rel="stylesheet" href="../main/prism.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../main/fav.png" type="image/x-icon">
+    <!-- S E O --->
+  <meta name="keywords" content="">
+  <meta name="description" content="We are helping to learn top technologies easily with our tutorials by giving lot example programs and their outputs for beginners ">
+    <title>Learn Programming Languages at your own pace</title>
+</head>
+<body>
+ <!--N A V   B A R -->
+     <div class="navbar" id="navbar">
+      <a href="../main/index.html"> <h2>Coding<span class="hdg">W3</span> </h2></a>  
+      <div id="navmenu" onclick> <i class="fa fa-bars"></i></div>
+      <div id="closenav" onclick> <i class="fa fa-xmark"></i></div>
+       <ul id="navlists">
+           <a href="../tutorials/tutom.html"><li class="active">Tutorials</li></a>
+           <a href="../example/exm.html"><li>More Examples</li></a>
+           <a href="../cheatsheets/cheatsm.html"><li>Cheatsheets</li></a>
+           <a href="../assignment/assim.html"><li>Exercises</li></a>
+         </ul>
+     
+    </div>
+    <!--- M E N U      I T E M S--->
+      <div class="grid-content" id="grid">
+        <a href="../tutorials/tutom.html" ><h2 class="headingt">Tutorials</h2></a>
+        <ul>
+           <a href="../tutorials/c/cm.html"><li> </i>C</li></a>
+           <a href="../tutorials/c++/cplusm.html"><li> </i>C++</li></a>
+           <a href="../tutorials/csharp/csharp.html"  ><li><i class="fa-thin fa-rectangle-code"></i>C#</li></a>
+            <a href="../tutorials/python/pym.html"><li><i class="fa-brands fa-python"></i>Python</li></a>
+            <a href="../tutorials/java/jm.html"><li><i class="fa-brands fa-java"></i>Java</li></a>
+            <a href="../tutorials/html/htmlm.html"> <li><i class="fa-brands fa-html5"></i> HTML</li></a>
+            <a href="../tutorials/css/cssm.html"><li><i class="fa-brands fa-css3-alt"></i>CSS</li></a>
+            <a href="../tutorials/js/jsm.html"><li><i class="fa-brands fa-square-js"></i>Javascript</li></a>
+            <a href="../tutorials/react js/rjm.html"><li> <i class="fa-brands fa-react"></i>React Js</li></a>
+            <a href="../tutorials/php/phpm.html"><li><i class="fa-brands fa-php"></i>PHP</li></a>
+            <a href="../tutorials/mysql/mysqlm.html"><li><i class="fa-solid fa-database"></i>My SQL</li></a>
+            <a href="../tutorials/r/rm.html"><li><i class="fa-solid fa-laptop-code"></i>R</li></a>
+            <a href="../tutorials/swift/swiftm.html"><li><i class="fa-brands fa-swift"></i>Swift</li></a>
+            <a href="../tutorials/ruby/rubym.html"><li><i class="fa-sharp fa-solid fa-code-simple"></i>Ruby</li></a>
+            <a href="../tutorials/kotlin/kotlinm.html"><li><i class="fa-brands fa-android"></i> Kotlin</li></a>
+            <a href="../tutorials/matlab/matlabm.html"><li> </i>Matlab</li></a>
+            <a href="../tutorials/dart/dartm.html"><li><i class="fa-brands fa-app-store-ios"></i>Dart</li></a>
+    </ul>
+    </div>
+    <script src="../main/prism.js"></script>
+    <script src="../main/app.js"></script>
+  <script>
+navmenu = document.getElementById('navmenu');
+closemenu = document.getElementById('closenav');
+navlinks = document.getElementById('navlists');
+grid = document.getElementById('grid');
+navmenu.onclick = function(){
+ navlinks.style.display="flex";
+ navmenu.style.display="none";
+ closemenu.style.display="flex";
+ grid.style.marginTop="250px";
+ }
+ closenav.onclick = function(){
+ navlinks.style.display="none";
+ navmenu.style.display="flex";
+ closemenu.style.display="none";
+ grid.style.marginTop="130px";
+ }
+  </script>
+    
+   
+  </body>
+</html>

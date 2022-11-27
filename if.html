@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../main/style.css">
+    <link rel="stylesheet" href="../../main/prism.css">
+    <meta name="description" content="if statement in c is a block of code that will executes when the given condition is true. It checks the condition first if it is true if block of code will executes otherwise it skips.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../../main/fav.png" type="image/x-icon">
+    <title>C if statement with examples</title>
+</head>
+<body>
+    <div class="navbar">
+    <a href="../../main/index.html"><h2>Coding<span class="hdg">W3</span></h2></a>
+    <div id="menu" onclick><i class="fa-solid fa-bars"></i></div>
+    <div id="close" onclick> <i class="fa-solid fa-xmark"></i></div>      
+    <ul>
+        <a href="../../tutorials/c/cm.html"><li class="active">C Tutorial</li></a>
+        <a href="../../example/c/excm.html"> <li>C Examples</li></a>
+        <a href="../../cheatsheets/c/cch.html"><li>C Cheatsheet</li> </a>
+        <a href="../../assignment/c/as1.html"><li>C Exercises</li></a>
+        </ul>
+     </div>
+      <div class="content"> 
+        <main></main>
+<h1 class="head">if statement in C</h1>
+<p><code>if</code> statement is a decision making statement which executes a block of code only if the given condition is <b>true</b>. If the condition is false then it skips the <code>if</code> block.</p>
+<p> In simple words, the <code>if</code> statement first checks the conditon if the condition is true then  it executes the code inside <code>if</code> block otherwise it skips the <code>if</code> block.</p>
+<p>Ternary operator (?) also did like this type of process. We have already seen this in the <a href="./operators.html" class="back">C Operators tutorial</a>. </p>    
+<h2>Syntax</h2>   
+<pre>
+ <code class="language-c">
+    if(condition){
+        //true block code or instructions
+    }
+ </code>
+</pre>
+<h2>Example</h2>
+<pre>
+    <code class="language-c">
+ #include&lt;stdio.h&gt;
+ int main(){
+    int a = 3;
+    int b = 9;
+    if(a &lt; b){
+    printf("Hello welcome to Matrix Codez");
+    }
+    return 0;
+ }
+    </code>
+   </pre>
+   <details>
+    <summary>Output</summary>
+    <p class="op">Hello welcome to Matrix Codez</p>
+   </details>
+   <p>Here the condition is <b>a</b> is less than <b>b</b> so 3 is less than 9 so the given condition is true. We want to print <b>Hello welcome to Matrix Codez</b> if the condition is true so it happened.</p>
+   <p>Let's see another example</p>
+   <pre>
+    <code class="language-c">
+ #include&lt;stdio.h&gt;
+ int main(){
+ int a = 3;
+ int b = 9;
+ int sum;
+ if(a==3 &&  b==9){
+ sum = a+b;
+ }
+ printf("sum is %d",sum);
+    return 0;
+ }
+    </code>
+   </pre>
+   <details>
+    <summary>Output</summary>
+    <p class="op">sum is 12</p>
+   </details>
+   <p>Both conditions are true in the above example program, so it executes the if block. In the if block we add <b>a</b> and <b>b</b> and stored the result in a <code>sum</code> variable.</p>
+   <h2>Multiple if statements in C</h2>
+   <p>To check more than one conditon we use multiple if statements</p>
+   <pre>
+    <code class="language-c">
+ #include&lt;stdio.h&gt;
+ int main(){
+ int age;
+ printf("Enter Your age");
+ scanf("%d",&age);
+ if(age &lt; 18){
+    printf("Sorry you can't get license");
+}
+if(age &gt; 16 && age &lt; 18){
+    printf("You should wait for one year to get a license");
+}
+if(age &gt;= 18){
+    printf("You can get a license");
+}
+return 0;
+}
+    </code>
+   </pre>
+   <details><summary>Output 1</summary><p class="op">Enter Your age18 <br>
+    You can get a license</p></details>
+    <details><summary>Output 2</summary><p class="op"> Enter Your age15 <br>
+        Sorry you can't get license</details> 
+   <p>You can see that we asked the users for their age and we set some conditions. So it checks all the conditions and it executes the code where the condition is true.
+   </p>
+   <p>What will happen if two conditions are true</p>
+   <pre>
+    <code class="language-c">
+ #include&lt;stdio.h&gt;
+ int main(){
+ int age;
+ printf("Enter Your age");
+ scanf("%d",&age);
+ if(age &lt; 18){
+    printf("Sorry you can't get license\n");
+}
+if(age  &gt;= 18){
+    printf("You are age is just 18 so you can get a licence\n");
+}
+if(age &lt; 19){
+    printf("You can get a license\n");
+}
+return 0;
+}
+    </code>
+   </pre>
+   <details>
+    <summary>Output</summary>
+        <p class="op">Enter Your age18 <br>
+            You are age is just 18 so you can get a licence <br>
+            You can get a license</p>
+     
+   </details>
+   <p>Here both 2 and 3 if conditions are true so it executes both if block code in order.</p>
+   <p>We said that if the condition is false it skips the <b>if</b> block but we can let that code to executes in <b>else</b> block.</p>
+</main>
+   <div class="nextprev">
+    <a href="./control.html" class="next">Previous</a>
+    <a href="./ifelse.html" class="next">Next</a>
+ 
+    </div>
+   <div class="task">
+            <h2>Exercise</h2>
+            <p>Including if...else</p>
+<ul>
+<li>1. Ask the user for a number and make a condition like, if the number is greater than 100
+then print the message on the console like <b>Your number is greater than 100</b>
+</li>
+<li>2. Ask the user for a number if it is in the range between 30 and 50 then print <b>Your value is in between 30 and 50</b></li>
+<li>3. Make a condition to sum the user input value with 10 if the user input value is less than 30.</li>
+<li>4. Print the message in the console based on user input like,<b>You might  entered T or C</b>. By taking two 
+characters from the user.</li>
+<li>5. Check whether the user input value is <b>positive</b> or <b>negative</b></li>
+ 
+</ul>
+         </div>
+         <a href="./as4" class="check">Check answers here</a>
+         <div class="examples">
+            <h2>Some more examples for practicing</h2>
+            <ul>
+                <li><a href="../../example/c/excm.html" >1. Print nth table using nested  for loops</a></li>
+                <li> <a href="../../example/c/cfib.html" > 2. Fibonacci series </a></li>
+                <li><a href="../../example/c/cfact.html" >3. Factorial of a given number using recursion</a></li>
+                <li><a href="../../example/c/excm.html">More...</a></li>
+            </ul>
+         </div>
+            <div class="cheatsheet">
+               <h2>Download or view our simple cheatsheet</h2>
+                <a href="../../cheatsheets/c/cch.html">Simple C cheatsheet</a>
+            </div>
+           
+        
+         <div class="footer">
+            <h2><a href="../../main/index.html">CodingW3</a></h2>
+            <ul>
+                 <li><a href="../c/cm.html">C tutorial</a></li>
+ 
+            </ul>
+            <ul>
+                 <li><a href="../../example/c/excm.html">C basic programs</a></li>
+ 
+            </ul>
+            <ul>
+                 <li><a href="../../cheatsheets/c/cch.html">C Cheatsheet</a></li>
+     
+         </div>
+          </div>
+        <!---S I D E    B A R--->
+        <div class="sidebar" id="side">
+        <ul> 
+        <h2>Fundamentals</h2>
+        <a href="cm.html"><li>C Introduction</li></a>
+        
+        <h2>First Program</h2>
+        <a href="first.html"><li>Print "Hello World"</li></a>
+        <h2>IP and OP Functions</h2>
+        <a href="ip.html"><li>Output Function</li></a>
+        <a href="op.html"><li>Input Function</li></a>
+        <h2>Basics</h2>
+        <a href="keywords.html"><li> C Keywords</li></a>
+        <a href="characters.html"><li>C Escape Sequence</li></a>
+        <a href="datatypes.html"><li>C Data Types</li></a>
+        <a href="variables.html"><li>C Variables</li></a>
+        <a href="operators.html"><li>C Operators</li></a>
+        <h2>Control Statements</h2>
+        <a href="control.html"><li>C Control Statements</li></a>
+        <h2>if and if-else</h2>
+        <a href="if.html"><li>if statements</li></a>
+        <a href="ifelse.html"><li>if-else statements</li></a>
+        <a href="break.html"><li>break statement</li></a>
+        <a href="continue.html"><li>continue  statement</li></a>
+        <a href="goto.html"><li>goto statement</li></a>
+        <a href="switch.html"><li>switch statement</li></a>
+        <h2> Loops</h2>
+        <a href="loops.html"><li>C Loops</li></a>
+        <a href="while.html"><li>while Loop</li></a>
+        <a href="dowhile.html"><li>do while Loop</li></a>
+        <a href="for.html"><li>for Loop</li></a>
+        <a href="nested.html"><li>Nested Loops</li></a>
+        <h2>Functions</h2>
+        <a href="functions.html"><li>C Functions</li></a>
+        <a href="prototyoe.html"><li>C Function Declaration</li></a>
+        <a href="paraandarg.html"><li>C Function Parameters and Arguments</li></a>
+        <a href="recursion.html"><li>C Recursive Functions</li></a>
+        <h2>Arrays</h2>
+        <a href="arrays.html"><li>C Arrays</li></a>
+        <h2>Strings</h2>
+         <a href="strings.html"><li>C Strings</li></a>
+         <h2>Files</h2>
+        <a href="files.html"><li>Working With Files</li></a>
+        <h2>Pointers</h2>
+        <a href="pointers.html"><li>C Pointers</li></a>
+         <h2>C structures and unions</h2>
+         <a href="structures.html"><li>C Structures</li></a>
+         <a href="union.html"><li>C Unions</li></a>
+    
+        </ul>
+        </div>
+        <script src="../../main/prism.js"></script>
+        <script src="../../main/app.js"></script>
+        </body>
+        </html>
